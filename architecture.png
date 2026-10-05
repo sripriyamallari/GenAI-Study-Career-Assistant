@@ -1,0 +1,104 @@
+import matplotlib.pyplot as plt
+from matplotlib.patches import FancyBboxPatch
+
+fig, ax = plt.subplots(figsize=(12, 8))
+
+ax.set_xlim(0, 12)
+ax.set_ylim(0, 10)
+ax.axis("off")
+
+
+def box(x, y, width, height, text, fontsize=12):
+    patch = FancyBboxPatch(
+        (x, y),
+        width,
+        height,
+        boxstyle="round,pad=0.03,rounding_size=0.15",
+        linewidth=2,
+        fill=False
+    )
+    ax.add_patch(patch)
+
+    ax.text(
+        x + width / 2,
+        y + height / 2,
+        text,
+        ha="center",
+        va="center",
+        fontsize=fontsize,
+        fontweight="bold"
+    )
+
+
+def arrow(x1, y1, x2, y2):
+    ax.annotate(
+        "",
+        xy=(x2, y2),
+        xytext=(x1, y1),
+        arrowprops=dict(
+            arrowstyle="->",
+            linewidth=2
+        )
+    )
+
+
+# Title
+ax.text(
+    6,
+    9.6,
+    "GenAI Study & Career Assistant - Architecture",
+    ha="center",
+    va="center",
+    fontsize=18,
+    fontweight="bold"
+)
+
+
+# User
+box(4.5, 8.2, 3, 0.7, "USER")
+
+# Streamlit UI
+box(4, 6.8, 4, 0.8, "Streamlit User Interface")
+
+# Agent Router
+box(4, 5.4, 4, 0.8, "Agent Router")
+
+# Three components
+box(0.5, 3.5, 3, 1.0, "Calculator Tool")
+box(4.5, 3.5, 3, 1.0, "RAG Pipeline")
+box(8.5, 3.5, 3, 1.0, "Gemini LLM")
+
+# RAG components
+box(4.5, 1.7, 3, 0.8, "PDF Document")
+box(4.5, 0.4, 3, 0.8, "TF-IDF Retrieval")
+
+# Final Answer
+box(8.5, 1.7, 3, 0.8, "Final AI Answer")
+
+
+# Arrows
+arrow(6, 8.2, 6, 7.6)
+arrow(6, 6.8, 6, 6.2)
+
+arrow(4, 5.8, 2, 4.5)
+arrow(6, 5.4, 6, 4.5)
+arrow(8, 5.8, 10, 4.5)
+
+arrow(6, 3.5, 6, 2.5)
+arrow(6, 1.7, 6, 1.2)
+
+arrow(10, 3.5, 10, 2.5)
+
+# Final connection
+arrow(7.5, 0.8, 10, 1.7)
+
+# Save image
+plt.savefig(
+    "architecture.png",
+    dpi=300,
+    bbox_inches="tight"
+)
+
+plt.show()
+
+print("architecture.png created successfully!")
