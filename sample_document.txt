@@ -1,0 +1,19 @@
+Artificial Intelligence Study Notes
+
+Artificial Intelligence (AI) is a field of computer science that focuses on creating systems that can perform tasks that normally require human intelligence.
+
+Machine Learning is a subset of Artificial Intelligence. It allows computers to learn patterns from data and make predictions or decisions without being explicitly programmed for every situation.
+
+Deep Learning is a subset of Machine Learning that uses neural networks with multiple layers.
+
+Generative AI refers to AI systems that can generate new content such as text, images, audio, video and code.
+
+Large Language Models (LLMs) are AI models trained on large amounts of text data. They can understand and generate human-like text.
+
+Retrieval-Augmented Generation (RAG) combines information retrieval with a language model. A RAG system retrieves relevant information from documents and provides that information to the language model before generating an answer.
+
+Prompt Engineering is the process of designing effective instructions for an AI model to produce useful and accurate responses.
+
+AI agents are systems that can decide what action or tool to use to accomplish a task.
+
+Important AI skills include Python, machine learning, deep learning, natural language processing, generative AI, prompt engineering, RAG and AI agents.
