@@ -1,4 +1,4 @@
-6streamlit
+streamlit
 google-genai
 pypdf
 scikit-learn
